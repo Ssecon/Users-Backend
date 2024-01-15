@@ -1,10 +1,13 @@
 package com.users.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
 public class CreateUserRequest {
 
-    String UserName;
-    String UserEmail;
+    @JsonProperty(value = "username")
+    String userName;
+    @JsonProperty(value = "useremail")
+    String userEmail;
 }
